@@ -33,10 +33,10 @@ function App() {
       <Navbar />
       <Router>
         <Routes>
-          <Route path='/' element={ <Login />} />
-          <Route path="/home" element={<PrivateRoute element={<Show />} />} />
-          <Route path="/create" element={<PrivateRoute element={<Create />} />} />
-          <Route path="/edit/:id" element={<PrivateRoute element={<Edit />} />} />
+          {/* <Route path='/' element={ <Login />} /> */}
+          <Route path="/" element={<Show />} />
+          <Route path="/create" element={<Create />}/> 
+          <Route path="/edit/:id" element={<Edit />}/> 
         </Routes>
       </Router>
       <Pie />
