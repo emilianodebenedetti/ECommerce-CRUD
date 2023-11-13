@@ -9,7 +9,7 @@ import Login from './components/Login';
 import React, { useEffect, useState } from 'react';
 import { auth } from './firebaseConfig/firebase';
 
-const PrivateRoute = ({ element }) => {
+/* const PrivateRoute = ({ element }) => {
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const PrivateRoute = ({ element }) => {
   }, []);
 
   return authenticated ? <React.Fragment>{element}</React.Fragment> : <Navigate to="/" />;
-};
+}; */
 
 function App() {
   return (
