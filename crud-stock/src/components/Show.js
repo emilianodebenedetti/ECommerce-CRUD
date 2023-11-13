@@ -61,7 +61,7 @@ const Show = () => {
 
   //funcion para eliminar un DOC
   const deleteProduct = async (id) => {
-    const productDoc = doc(db, "articles", id)
+    const productDoc = doc(db, "articulos", id)
     await deleteDoc(productDoc)
     getProducts()
   }
