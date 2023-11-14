@@ -17,9 +17,10 @@ const firebaseConfig = {
 //pasamos como parametro initial
 const app = initializeApp(firebaseConfig);
 
+console.log('Firebase App inicializado:', app);
 
-export const storage = getStorage(app)
 export const db = getFirestore(app)
+export const storage = getStorage(app)
 export const auth = getAuth(app);
 
 export default app;

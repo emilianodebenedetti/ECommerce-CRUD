@@ -58,7 +58,7 @@ const Edit = () => {
             color: color, 
             imagen: imagen, 
         }
-        navigate('/home') 
+        navigate('/') 
         await updateDoc(articulo, data)
         console.log("articulo actualizado")
     }

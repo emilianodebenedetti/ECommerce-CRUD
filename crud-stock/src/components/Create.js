@@ -71,7 +71,7 @@ const Create = () => {
             imagen: imagen,
             /* imagenArchivo: imagenArchivo, */
         })
-        navigate('/home')  
+        navigate('/')  
     }
 
     return (
