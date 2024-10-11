@@ -58,7 +58,6 @@ const Show = () => {
     buscarProductos();
   };
 
-
   //funcion para eliminar un DOC
   const deleteProduct = async (id) => {
     const productDoc = doc(db, "articulos", id)
@@ -85,7 +84,6 @@ const Show = () => {
       }
     })
   }
-
   useEffect( () => {
       getProducts()
   }, [])
@@ -106,7 +104,7 @@ const Show = () => {
                 onChange={(e) => setBusqueda(e.target.value)}
               />
               <button className="btn btn-square" onClick={() => buscarProductos()}>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
               </button>
             </div>
 
@@ -119,11 +117,10 @@ const Show = () => {
                 <li>
                   <li>Filtrar por categorias:</li>
                   <ul className="p-2">
-                    <li onClick={() => handleCategoryFilter('Calzas')}><a>Calzas</a></li>
-                    <li onClick={() => handleCategoryFilter('Abrigos')}><a>Abrigos</a></li>
-                    <li onClick={() => handleCategoryFilter('Musculosas&Remeras')}><a>Musculosas&Remeras</a></li>
-                    <li onClick={() => handleCategoryFilter('Tops')}><a>Tops</a></li>
-                    <li onClick={() => handleCategoryFilter('Biker&Shorts')}><a>Biker&Shorts</a></li>
+                    <li onClick={() => handleCategoryFilter('Remeras')}><a>Remeras</a></li>
+                    <li onClick={() => handleCategoryFilter('Camperas')}><a>Camperas</a></li>
+                    <li onClick={() => handleCategoryFilter('Pantalones-Shorts')}><a>Pantalones / Shorts</a></li>
+                    <li onClick={() => handleCategoryFilter('Championes')}><a>Championes</a></li>
                   </ul>
                 </li>
               </ul>
@@ -152,26 +149,25 @@ const Show = () => {
               </tr>
             </thead> 
             <tbody>
-              {products
-              .sort((a, b) => a.nombre.localeCompare(b.nombre)) 
-              .map ( (product) => (
-                <tr key={product.id}>
-                  <th>{product.nombre}</th> 
-                  <th>{product.descripcion}</th> 
-                  <th>{product.categoria}</th> 
-                  <th>$ {product.precio}</th> 
-                  <th>{product.talle}</th> 
-                  <th>{product.color}</th> 
-                  <th><img src={product.imagen} width="50px" alt='Imagen'/></th> 
-                  <th>
-                    <Link to={`/edit/${product.id}`}><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 256 256"><path fill="currentColor" d="m227.31 73.37l-44.68-44.69a16 16 0 0 0-22.63 0L36.69 152A15.86 15.86 0 0 0 32 163.31V208a16 16 0 0 0 16 16h44.69a15.86 15.86 0 0 0 11.31-4.69L227.31 96a16 16 0 0 0 0-22.63ZM51.31 160L136 75.31L152.69 92L68 176.68ZM48 179.31L76.69 208H48Zm48 25.38L79.31 188L164 103.31L180.69 120Zm96-96L147.31 64l24-24L216 84.68Z"/></svg></Link>
-                    <button onClick={ () => { confirmDelete(product.id) } }><svg xmlns="http://www.w3.org/2000/svg" width="23px" height="23px" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7Zm2-4h2V8H9v9Zm4 0h2V8h-2v9Z"/></svg></button> 
-                  </th>                
-                </tr>
-              ))}
-                  
-            </tbody> 
-          </table>
+                {products
+                  .sort((a, b) => a.nombre.localeCompare(b.nombre)) 
+                  .map ( (product) => (
+                    <tr key={product.id}>
+                    <th>{product.nombre}</th> 
+                    <th>{product.descripcion}</th> 
+                    <th>{product.categoria}</th> 
+                    <th>$ {product.precio}</th> 
+                    <th>{product.talle}</th> 
+                    <th>{product.color}</th> 
+                    <th><img src={product.imagen} width="50px" alt='Imagen'/></th> 
+                    <th>
+                      <Link to={`/edit/${product.id}`}><svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 256 256"><path fill="currentColor" d="m227.31 73.37l-44.68-44.69a16 16 0 0 0-22.63 0L36.69 152A15.86 15.86 0 0 0 32 163.31V208a16 16 0 0 0 16 16h44.69a15.86 15.86 0 0 0 11.31-4.69L227.31 96a16 16 0 0 0 0-22.63ZM51.31 160L136 75.31L152.69 92L68 176.68ZM48 179.31L76.69 208H48Zm48 25.38L79.31 188L164 103.31L180.69 120Zm96-96L147.31 64l24-24L216 84.68Z"/></svg></Link>
+                      <button onClick={ () => { confirmDelete(product.id) } }><svg xmlns="http://www.w3.org/2000/svg" width="23px" height="23px" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.413-.588T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.588 1.413T17 21H7Zm2-4h2V8H9v9Zm4 0h2V8h-2v9Z"/></svg></button> 
+                    </th>                
+                    </tr>
+              ))} 
+            </tbody>             
+            </table>
         </div>
       </div>
     </>

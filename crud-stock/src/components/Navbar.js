@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
             <a className="normal-case text-lg ml-24 font-bold">
-                UNIVERSAL FITNESS control
+              E-Commerce CRUD
             </a>
     </div>
   )

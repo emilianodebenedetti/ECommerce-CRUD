@@ -4,7 +4,7 @@ const Pie = () => {
   return (
     <footer className="footer footer-center bg-grey py-8"> {/* static mt-auto */}
         <aside>
-          <p>Copyright © 2023 - unifitlove.com.uy</p>
+          <p> © 2023 - E-Commerce CRUD</p>
         </aside>
     </footer>
   )

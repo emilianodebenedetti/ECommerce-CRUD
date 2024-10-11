@@ -5,7 +5,7 @@ import { db, storage } from "../firebaseConfig/firebase"
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import Atras from './Atras'
 
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import withReactContent from 'sweetalert2-react-content'
 
 const MySwal = withReactContent(Swal)
@@ -88,11 +88,11 @@ const Edit = () => {
             const articuloData = art.data()
             setNombre(articuloData.nombre)
             setDescripcion(articuloData.descripcion)
-                setCategoria(articuloData.categoria)
-                setPrecio(articuloData.precio)
-                setTalle(articuloData.talle || {})
-                setColor(articuloData.color)
-                setImagen(articuloData.imagen || {})
+            setCategoria(articuloData.categoria)
+            setPrecio(articuloData.precio)
+            setTalle(articuloData.talle || {})
+            setColor(articuloData.color)
+            setImagen(articuloData.imagen || {})
                 /* setImagenArchivo(articuloData.imagenArchivo) */
             } else {
             console.log("Producto no existe")
