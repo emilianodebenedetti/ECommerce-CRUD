@@ -4,7 +4,6 @@ import { updateDoc, doc, getDoc } from 'firebase/firestore'
 import { db, storage } from "../firebaseConfig/firebase"
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import Atras from './Atras'
-
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import withReactContent from 'sweetalert2-react-content'
 
@@ -149,11 +148,10 @@ const Edit = () => {
                     required
                     >
                     <option>Seleccionar</option>
-                    <option>Calzas</option>
-                    <option>Abrigos</option>
-                    <option>Musculosas&Remeras</option>
-                    <option>Tops</option>
-                    <option>Biker&Shorts</option>
+                    <option>Remeras</option>
+                    <option>Camperas</option>
+                    <option>Pantalones-Shorts</option>
+                    <option>Championes</option>
                 </select>
                 {/* PRECIO */}
                 <label className="label">
