@@ -119,8 +119,8 @@ const Show = () => {
                   <ul className="p-2">
                     <li onClick={() => handleCategoryFilter('Remeras')}><a>Remeras</a></li>
                     <li onClick={() => handleCategoryFilter('Camperas')}><a>Camperas</a></li>
-                    <li onClick={() => handleCategoryFilter('Pantalones-Shorts')}><a>Pantalones / Shorts</a></li>
-                    <li onClick={() => handleCategoryFilter('Championes')}><a>Championes</a></li>
+                    <li onClick={() => handleCategoryFilter('Shorts')}><a>Shorts</a></li>
+                    <li onClick={() => handleCategoryFilter('Pantalones')}><a>Pantalones</a></li>
                   </ul>
                 </li>
               </ul>

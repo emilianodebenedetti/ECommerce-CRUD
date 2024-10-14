@@ -118,10 +118,11 @@ const Create = () => {
                         className="input input-bordered w-full max-w-xs" 
                         required
                     >
+                        <option>Seleccionar</option>
                         <option>Remeras</option>
                         <option>Camperas</option>
-                        <option>Pantalones-Shorts</option>
-                        <option>Championes</option>
+                        <option>Shorts</option>
+                        <option>Pantalones</option>
                     </select>
 
                     {/* PRECIO */}

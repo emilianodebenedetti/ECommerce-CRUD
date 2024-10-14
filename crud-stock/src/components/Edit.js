@@ -150,8 +150,8 @@ const Edit = () => {
                     <option>Seleccionar</option>
                     <option>Remeras</option>
                     <option>Camperas</option>
-                    <option>Pantalones-Shorts</option>
-                    <option>Championes</option>
+                    <option>Shorts</option>
+                    <option>Pantalones</option>
                 </select>
                 {/* PRECIO */}
                 <label className="label">
